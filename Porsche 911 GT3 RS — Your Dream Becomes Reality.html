@@ -1,0 +1,1300 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PORSCHE 911 GT3 RS — Your Dream Becomes Reality</title>
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Google Fonts: Montserrat & Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Montserrat:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            obsidian: '#0A0A0B',
+            carbon: '#141416',
+            graphite: '#1E1E22',
+            porscheRed: '#C8102E',
+            porscheGold: '#C5A059',
+            crisp: '#F5F5F7'
+          },
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            display: ['Montserrat', 'sans-serif']
+          }
+        }
+      }
+    };
+  </script>
+
+  <style>
+    body {
+      background-color: #0A0A0B;
+      color: #F5F5F7;
+      font-family: 'Inter', sans-serif;
+      overflow-x: hidden;
+    }
+
+    .font-display {
+      font-family: 'Montserrat', sans-serif;
+    }
+
+    .tabular-nums {
+      font-variant-numeric: tabular-nums;
+    }
+
+    /* Subtle luxury grid background */
+    .bg-studio-grid {
+      background-size: 64px 64px;
+      background-image: 
+        linear-gradient(to right, rgba(255, 255, 255, 0.025) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(255, 255, 255, 0.025) 1px, transparent 1px);
+    }
+
+    /* Glassmorphism navigation */
+    .glass-nav {
+      background: rgba(10, 10, 11, 0.86);
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    /* Photorealistic Studio Stage & Color-Grade System */
+    .photo-stage-wrapper {
+      position: relative;
+      overflow: hidden;
+      background-color: #141416;
+    }
+
+    .car-photo-base {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: filter 0.55s cubic-bezier(0.22, 1, 0.36, 1), transform 0.65s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+
+    .car-paint-overlay {
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      mix-blend-mode: multiply;
+      opacity: 0;
+      transition: background-color 0.55s ease, opacity 0.55s ease, mix-blend-mode 0.3s ease;
+    }
+
+    .car-specular-sheen {
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      background: linear-gradient(125deg, rgba(255,255,255,0.14) 0%, rgba(255,255,255,0) 42%, rgba(0,0,0,0.28) 100%);
+      mix-blend-mode: overlay;
+    }
+
+    /* Subtle custom scrollbar */
+    ::-webkit-scrollbar {
+      width: 6px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #0A0A0B;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #2C2C32;
+      border-radius: 3px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #C8102E;
+    }
+
+    /* Input focus elegance */
+    .luxury-input {
+      background-color: #141416;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      color: #F5F5F7;
+      transition: all 0.25s ease;
+    }
+    .luxury-input:focus {
+      outline: none;
+      border-color: #C5A059;
+      box-shadow: 0 0 0 1px rgba(197, 160, 89, 0.3);
+    }
+  </style>
+</head>
+<body class="antialiased selection:bg-porscheRed selection:text-white">
+
+  <!-- =========================================================
+       STICKY GLASSMORPHISM NAVIGATION BAR
+  ========================================================== -->
+  <header class="fixed top-0 left-0 right-0 z-50 glass-nav">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      <!-- Original Porsche Crest & Wordmark -->
+      <a href="#hero" class="flex items-center gap-3.5 group">
+        <div class="w-10 h-11 flex items-center justify-center overflow-hidden shrink-0">
+          <img
+            src="1000006004.jpg"
+            alt="Escudo Oficial Porsche"
+            onerror="this.onerror=null;this.src='https://placehold.co/80x96/0A0A0B/C5A059?text=PORSCHE';"
+            class="w-full h-full object-contain mix-blend-lighten scale-125 transition-transform duration-300 group-hover:scale-135"
+          />
+        </div>
+        <div class="flex flex-col">
+          <span class="font-display font-bold tracking-[0.32em] text-sm sm:text-base text-white">PORSCHE</span>
+          <span class="text-[10px] tracking-[0.22em] text-porscheGold uppercase font-medium">911 GT3 RS · 992</span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation Links -->
+      <nav class="hidden md:flex items-center gap-8 text-xs font-display tracking-[0.18em] uppercase text-gray-300">
+        <a href="#campana" class="hover:text-white transition-colors py-2">Concepto</a>
+        <a href="#configurador" class="hover:text-white transition-colors py-2">Configurador</a>
+        <a href="#especificaciones" class="hover:text-white transition-colors py-2">Ingeniería</a>
+        <a href="#cita" class="hover:text-white transition-colors py-2">Agendar Cita</a>
+      </nav>
+
+      <!-- Sleek Compact Primary CTA & Mobile Menu Button -->
+      <div class="flex items-center gap-3">
+        <a href="#cita" class="hidden sm:inline-flex items-center gap-2 px-5 py-2.5 rounded-md bg-porscheRed hover:bg-[#a80d26] text-white text-[11px] font-display font-medium tracking-[0.2em] uppercase transition-all">
+          <span>Agendar Cita</span>
+        </a>
+        <button id="mobile-menu-btn" type="button" class="md:hidden p-2.5 rounded-lg bg-carbon border border-white/10 text-gray-200 hover:text-white" aria-label="Abrir menú">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M4 6h16M4 12h16M4 18h16"/></svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Drawer Menu -->
+    <div id="mobile-menu" class="hidden md:hidden bg-carbon border-t border-white/10 px-6 py-5 space-y-4">
+      <a href="#campana" class="block text-xs font-display tracking-[0.2em] uppercase text-gray-300 hover:text-white py-1.5">Concepto de Campaña</a>
+      <a href="#configurador" class="block text-xs font-display tracking-[0.2em] uppercase text-gray-300 hover:text-white py-1.5">Configurador Studio</a>
+      <a href="#especificaciones" class="block text-xs font-display tracking-[0.2em] uppercase text-gray-300 hover:text-white py-1.5">Ingeniería Pura</a>
+      <a href="#cita" class="block text-xs font-display tracking-[0.2em] uppercase text-porscheGold font-semibold py-1.5">Agendar Cita Privada</a>
+    </div>
+  </header>
+
+  <!-- =========================================================
+       1. HERO SECTION — REAL STUDIO PHOTOGRAPHY SHOWCASE
+  ========================================================== -->
+  <section id="hero" class="relative min-h-screen pt-24 pb-12 flex flex-col justify-between bg-obsidian bg-studio-grid overflow-hidden">
+    <!-- Subtle Ambient Spotlights -->
+    <div class="pointer-events-none absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[720px] h-[400px] bg-white/[0.035] rounded-full blur-[130px]"></div>
+
+    <!-- Hero Center Content -->
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full my-auto pt-6 pb-8 relative z-10">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+        <!-- Editorial Headline Column (5 Cols) -->
+        <div class="lg:col-span-5 space-y-6">
+          <div class="inline-flex items-center gap-3 px-3.5 py-1.5 rounded-full bg-carbon border border-white/10">
+            <img
+              src="1000006004.jpg"
+              alt="Crest"
+              onerror="this.style.display='none'"
+              class="w-4 h-5 object-contain mix-blend-lighten"
+            />
+            <span class="text-[11px] font-display tracking-[0.26em] uppercase text-porscheGold font-medium">Your Dream Becomes Reality</span>
+          </div>
+
+          <h1 class="font-display font-extrabold text-4xl sm:text-5xl lg:text-[54px] tracking-tight leading-[1.05] text-white">
+            PORSCHE <br/>
+            <span class="text-transparent bg-clip-text bg-gradient-to-r from-white via-gray-200 to-gray-500">911 GT3 RS</span>
+          </h1>
+
+          <p class="text-sm sm:text-base text-gray-300 font-light leading-relaxed max-w-md">
+            Ingeniería de competición homologada para la carretera. <span class="text-white font-medium">525 CV atmosféricos, 9,000 RPM y 860 kg de carga aerodinámica</span> esculpidos en fibra de carbono.
+          </p>
+
+          <!-- Refined, Compact & Proportional CTAs -->
+          <div class="flex flex-wrap items-center gap-3.5 pt-2">
+            <a href="#configurador" class="inline-flex items-center justify-center px-6 py-3 rounded-md bg-white text-obsidian hover:bg-gray-200 font-display font-semibold text-xs tracking-[0.2em] uppercase transition-all">
+              Configurar Modelo
+            </a>
+            <a href="#cita" class="inline-flex items-center justify-center px-6 py-3 rounded-md bg-porscheRed hover:bg-[#a80d26] text-white font-display font-medium text-xs tracking-[0.2em] uppercase transition-all">
+              Agendar Cita Privada
+            </a>
+          </div>
+        </div>
+
+        <!-- Real Studio Photography Frame (7 Cols) -->
+        <div class="lg:col-span-7 relative">
+          <div class="relative rounded-2xl bg-carbon border border-white/10 overflow-hidden shadow-2xl">
+            <div class="relative aspect-[16/10] w-full overflow-hidden bg-[#2b2b2e]">
+              <img
+                src="1000006001.jpg"
+                alt="Porsche 911 GT3 RS 992 Weissach Package en estudio"
+                onerror="this.onerror=null;this.src='https://placehold.co/1200x750/141416/F5F5F7?text=Porsche+911+GT3+RS';"
+                class="w-full h-full object-cover object-center"
+              />
+              <!-- Subtle Vignette Edge Blend -->
+              <div class="pointer-events-none absolute inset-0 bg-gradient-to-t from-obsidian/80 via-transparent to-obsidian/25"></div>
+
+              <!-- Top Floating Studio Tag -->
+              <div class="absolute top-4 left-4 right-4 flex items-center justify-between text-[10px] font-display tracking-[0.22em] uppercase text-gray-200">
+                <span class="px-3 py-1 rounded bg-obsidian/70 backdrop-blur-md border border-white/10">Weissach Package · 992</span>
+                <span class="px-3 py-1 rounded bg-obsidian/70 backdrop-blur-md border border-white/10 text-porscheGold">DRS Active Aero</span>
+              </div>
+
+              <!-- Bottom Caption Overlay -->
+              <div class="absolute bottom-4 left-5 right-5 flex flex-wrap items-end justify-between gap-2">
+                <div>
+                  <span class="text-[10px] font-display tracking-[0.24em] uppercase text-gray-400 block">Campaña Conceptual · Behance</span>
+                  <span class="font-display font-semibold text-sm text-white">Ice Grey Metallic · Rines Pyro Red</span>
+                </div>
+                <span class="font-display font-semibold text-xs sm:text-sm text-white tracking-wider bg-obsidian/75 backdrop-blur-md px-3.5 py-1.5 rounded border border-white/10 tabular-nums">
+                  Desde $241,300 USD
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Quick Telemetry Strip -->
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full relative z-10">
+      <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 bg-carbon/90 border border-white/10 rounded-xl p-5 backdrop-blur-md">
+        <div class="px-3 py-1 border-r border-white/10">
+          <span class="block text-[10px] font-display tracking-[0.2em] uppercase text-gray-400">Potencia</span>
+          <span class="font-display font-bold text-xl sm:text-2xl text-white tabular-nums">525 <span class="text-xs font-normal text-porscheGold">CV / 386 kW</span></span>
+        </div>
+        <div class="px-3 py-1 lg:border-r border-white/10">
+          <span class="block text-[10px] font-display tracking-[0.2em] uppercase text-gray-400">0–100 km/h</span>
+          <span class="font-display font-bold text-xl sm:text-2xl text-white tabular-nums">3.2 <span class="text-xs font-normal text-porscheGold">s</span></span>
+        </div>
+        <div class="px-3 py-1 border-r border-white/10">
+          <span class="block text-[10px] font-display tracking-[0.2em] uppercase text-gray-400">Vel. Máxima</span>
+          <span class="font-display font-bold text-xl sm:text-2xl text-white tabular-nums">296 <span class="text-xs font-normal text-porscheGold">km/h</span></span>
+        </div>
+        <div class="px-3 py-1">
+          <span class="block text-[10px] font-display tracking-[0.2em] uppercase text-gray-400">Carga Aerodinámica</span>
+          <span class="font-display font-bold text-xl sm:text-2xl text-white tabular-nums">860 <span class="text-xs font-normal text-porscheGold">kg @ 285 km/h</span></span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================
+       CAMPAIGN STORYTELLING BANNER ("CONCEPTO DE CAMPAÑA")
+  ========================================================== -->
+  <section id="campana" class="py-20 bg-carbon border-y border-white/10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-3xl mb-12">
+        <p class="text-xs font-display tracking-[0.28em] uppercase text-porscheGold mb-3">Concepto Creativo · Campaña 360°</p>
+        <h2 class="font-display font-bold text-3xl sm:text-4xl text-white tracking-tight">Del sueño de la infancia a la precisión del circuito.</h2>
+        <p class="mt-4 text-gray-400 font-light leading-relaxed">
+          El Porsche 911 GT3 RS no se mide únicamente por sus cifras en el túnel de viento, sino por la emoción que despierta desde la primera vez que lo ves estacionado bajo las luces cálidas al atardecer.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="p-6 rounded-xl bg-obsidian border border-white/10 hover:border-porscheGold/40 transition-colors">
+          <span class="text-xs font-display tracking-[0.25em] text-porscheRed uppercase font-semibold">Acto I · 00:00</span>
+          <h3 class="font-display font-semibold text-lg text-white mt-2">El Despertar</h3>
+          <p class="text-sm text-gray-400 mt-2 leading-relaxed">
+            En la oscuridad absoluta del estudio, el escudo metálico gira con precisión quirúrgica antes de que los faros LED de cuatro puntos enciendan el rugido del bóxer 4.0L.
+          </p>
+        </div>
+        <div class="p-6 rounded-xl bg-obsidian border border-white/10 hover:border-porscheGold/40 transition-colors">
+          <span class="text-xs font-display tracking-[0.25em] text-porscheRed uppercase font-semibold">Acto II · 00:08</span>
+          <h3 class="font-display font-semibold text-lg text-white mt-2">La Ruta</h3>
+          <p class="text-sm text-gray-400 mt-2 leading-relaxed">
+            Entre montañas cubiertas de neblina al amanecer, cada curva demuestra cómo 860 kg de carga aerodinámica convierten el viento en tracción pura a 9,000 RPM.
+          </p>
+        </div>
+        <div class="p-6 rounded-xl bg-obsidian border border-white/10 hover:border-porscheGold/40 transition-colors">
+          <span class="text-xs font-display tracking-[0.25em] text-porscheGold uppercase font-semibold">Acto III · 00:21</span>
+          <h3 class="font-display font-semibold text-lg text-white mt-2">Your Dream Becomes Reality</h3>
+          <p class="text-sm text-gray-400 mt-2 leading-relaxed">
+            Una estación rural al caer la tarde y la mirada de asombro de un niño frente al GT3 RS nos recuerdan por qué construimos máquinas inolvidables.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================
+       2. REAL-PHOTO INTERACTIVE CONFIGURATOR ("CONFIGURA TU 911 GT3 RS")
+  ========================================================== -->
+  <section id="configurador" class="py-24 bg-obsidian relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <!-- Section Header -->
+      <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-10">
+        <div>
+          <p class="text-xs font-display tracking-[0.28em] uppercase text-porscheGold mb-2">Porsche Exclusive Manufaktur</p>
+          <h2 class="font-display font-bold text-3xl sm:text-4xl text-white tracking-tight">Configura tu 911 GT3 RS</h2>
+        </div>
+
+        <!-- Real Photography Camera Angle Switcher -->
+        <div class="flex flex-wrap items-center gap-2" role="group" aria-label="Ángulos de fotografía en estudio">
+          <button type="button" data-angle="side" class="angle-btn active px-4 py-2 rounded-md bg-white text-obsidian font-display font-semibold text-[11px] tracking-[0.16em] uppercase transition-all">
+            Vista Lateral
+          </button>
+          <button type="button" data-angle="front" class="angle-btn px-4 py-2 rounded-md bg-carbon border border-white/15 text-gray-300 hover:text-white font-display font-medium text-[11px] tracking-[0.16em] uppercase transition-all">
+            3/4 Frontal
+          </button>
+          <button type="button" data-angle="rear" class="angle-btn px-4 py-2 rounded-md bg-carbon border border-white/15 text-gray-300 hover:text-white font-display font-medium text-[11px] tracking-[0.16em] uppercase transition-all">
+            3/4 Trasero
+          </button>
+        </div>
+      </div>
+
+      <!-- Main Configurator Grid -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+        
+        <!-- LEFT: Real Photography Studio Stage & Summary (7 Cols) -->
+        <div class="lg:col-span-7 space-y-6">
+          <div class="rounded-2xl bg-carbon border border-white/10 overflow-hidden shadow-2xl">
+            <!-- Top Studio Metadata Bar -->
+            <div class="px-6 py-4 bg-obsidian/80 border-b border-white/10 flex flex-wrap items-center justify-between gap-2">
+              <div>
+                <span id="stage-angle-label" class="text-[10px] font-display tracking-[0.22em] uppercase text-gray-400 block">Fotografía de Estudio · Perfil Lateral</span>
+                <span id="active-paint-title" class="font-display font-semibold text-sm text-white">Blanco Carrara / Ice Grey Metallic</span>
+              </div>
+              <div class="text-right">
+                <span id="active-wheel-title" class="text-xs font-display tracking-wider text-porscheRed font-semibold uppercase">Rines Pyro Red</span>
+                <span id="active-pack-badge" class="block text-[11px] text-gray-400">Paquete Weissach Activo</span>
+              </div>
+            </div>
+
+            <!-- Photorealistic Image Viewport with Dynamic Color-Grade Layer -->
+            <div class="photo-stage-wrapper aspect-[16/10] w-full">
+              <img
+                id="configurator-photo"
+                src="1000005999_2.jpg"
+                alt="Porsche 911 GT3 RS en estudio"
+                onerror="this.onerror=null;this.src='https://placehold.co/1200x750/1E1E22/F5F5F7?text=Porsche+911+GT3+RS+Studio';"
+                class="car-photo-base"
+              />
+              <!-- Photorealistic Paint Tint Layer -->
+              <div id="car-paint-overlay" class="car-paint-overlay"></div>
+              <!-- Subtle Specular Studio Reflection -->
+              <div class="car-specular-sheen"></div>
+            </div>
+
+            <!-- Bottom Studio Telemetry Bar -->
+            <div class="grid grid-cols-3 gap-2 px-6 py-4 bg-obsidian/80 border-t border-white/10 text-center text-xs">
+              <div>
+                <span class="block text-[10px] uppercase tracking-widest text-gray-400">Carga Aerodinámica</span>
+                <span class="font-display font-bold text-white tabular-nums">860 kg @ 285 km/h</span>
+              </div>
+              <div>
+                <span class="block text-[10px] uppercase tracking-widest text-gray-400">Peso en Vacío</span>
+                <span id="stage-weight-val" class="font-display font-bold text-white tabular-nums">1,450 kg (DIN)</span>
+              </div>
+              <div>
+                <span class="block text-[10px] uppercase tracking-widest text-gray-400">Sistema de Frenado</span>
+                <span id="stage-brake-val" class="font-display font-bold text-white">Acero Competición</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Sleek Live Pricing & Proportional Transfer CTA Card -->
+          <div class="rounded-2xl bg-carbon border border-white/10 p-6 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-5">
+            <div class="space-y-1.5">
+              <div class="flex items-center gap-4 text-xs text-gray-400">
+                <span>Base: <strong class="text-gray-200 font-medium tabular-nums">$241,300 USD</strong></span>
+                <span>·</span>
+                <span>Opciones: <strong id="options-price-display" class="text-porscheGold font-medium tabular-nums">+$35,020 USD</strong></span>
+              </div>
+              <div class="flex items-baseline gap-3">
+                <span class="text-[11px] font-display tracking-[0.2em] uppercase text-gray-400">Total Estimado:</span>
+                <span id="total-price-display" class="font-display font-bold text-2xl text-white tabular-nums">$276,320 USD</span>
+              </div>
+            </div>
+
+            <!-- Sleek, Compact & Proportional Button -->
+            <button id="reserve-config-btn" type="button" class="px-6 py-3 rounded-md bg-porscheRed hover:bg-[#a80d26] text-white font-display font-medium text-xs tracking-[0.2em] uppercase transition-all inline-flex items-center gap-2 shrink-0">
+              <span>Transferir a Cita</span>
+              <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+            </button>
+          </div>
+        </div>
+
+        <!-- RIGHT: Customization Controls (5 Cols) -->
+        <div class="lg:col-span-5 space-y-6 bg-carbon border border-white/10 rounded-2xl p-6 sm:p-7">
+          
+          <!-- 1. Exterior Paint Colors -->
+          <div>
+            <div class="flex items-center justify-between mb-3">
+              <h3 class="font-display font-semibold text-xs tracking-[0.2em] uppercase text-white">1. Acabado Exterior</h3>
+              <span id="paint-price-tag" class="text-xs text-gray-400 tabular-nums">Serie ($0)</span>
+            </div>
+            <div id="paint-swatches" class="grid grid-cols-3 gap-2.5">
+              <!-- Populated by JS -->
+            </div>
+          </div>
+
+          <hr class="border-white/10" />
+
+          <!-- 2. Forged Wheel Finishes -->
+          <div>
+            <div class="flex items-center justify-between mb-3">
+              <h3 class="font-display font-semibold text-xs tracking-[0.2em] uppercase text-white">2. Rines Forjados Magnesio</h3>
+              <span id="wheel-price-tag" class="text-xs text-porscheGold tabular-nums">+$1,500 USD</span>
+            </div>
+            <div id="wheel-swatches" class="grid grid-cols-2 gap-2.5">
+              <!-- Populated by JS -->
+            </div>
+          </div>
+
+          <hr class="border-white/10" />
+
+          <!-- 3. Performance Packages -->
+          <div>
+            <h3 class="font-display font-semibold text-xs tracking-[0.2em] uppercase text-white mb-3">3. Equipamiento de Circuito</h3>
+            <div class="space-y-3">
+              <!-- Weissach Package -->
+              <label class="flex items-start gap-3.5 p-3.5 rounded-xl bg-obsidian border border-white/10 hover:border-white/25 cursor-pointer transition-all">
+                <input type="checkbox" id="pkg-weissach" checked class="mt-1 w-4 h-4 accent-porscheRed rounded cursor-pointer" />
+                <div class="flex-1">
+                  <div class="flex items-center justify-between gap-2">
+                    <span class="font-display font-semibold text-xs text-white">Paquete Weissach</span>
+                    <span class="text-xs text-porscheGold tabular-nums font-medium">+$33,520</span>
+                  </div>
+                  <p class="text-[11px] text-gray-400 mt-1 leading-relaxed">Capó, techo, retrovisores y alerón trasero en fibra de carbono vista + jaula antivuelco.</p>
+                </div>
+              </label>
+
+              <!-- PCCB Ceramic Brakes -->
+              <label class="flex items-start gap-3.5 p-3.5 rounded-xl bg-obsidian border border-white/10 hover:border-white/25 cursor-pointer transition-all">
+                <input type="checkbox" id="pkg-pccb" class="mt-1 w-4 h-4 accent-porscheRed rounded cursor-pointer" />
+                <div class="flex-1">
+                  <div class="flex items-center justify-between gap-2">
+                    <span class="font-display font-semibold text-xs text-white">Frenos Cerámicos (PCCB)</span>
+                    <span class="text-xs text-porscheGold tabular-nums font-medium">+$9,210</span>
+                  </div>
+                  <p class="text-[11px] text-gray-400 mt-1 leading-relaxed">Discos compuestos cerámicos de 410 mm con pinzas monobloque en Amarillo Racing.</p>
+                </div>
+              </label>
+
+              <!-- Front Axle Lift -->
+              <label class="flex items-start gap-3.5 p-3.5 rounded-xl bg-obsidian border border-white/10 hover:border-white/25 cursor-pointer transition-all">
+                <input type="checkbox" id="pkg-lift" class="mt-1 w-4 h-4 accent-porscheRed rounded cursor-pointer" />
+                <div class="flex-1">
+                  <div class="flex items-center justify-between gap-2">
+                    <span class="font-display font-semibold text-xs text-white">Elevación del Eje Delantero</span>
+                    <span class="text-xs text-porscheGold tabular-nums font-medium">+$3,670</span>
+                  </div>
+                  <p class="text-[11px] text-gray-400 mt-1 leading-relaxed">Sistema electrohidráulico que eleva el labio frontal 40 mm a baja velocidad.</p>
+                </div>
+              </label>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================
+       3. TECHNICAL SPECIFICATIONS & REAL REAR 3/4 STUDIO VIEW
+  ========================================================== -->
+  <section id="especificaciones" class="py-24 bg-carbon border-t border-white/10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
+        <div>
+          <p class="text-xs font-display tracking-[0.28em] uppercase text-porscheGold mb-2">Telemetría &amp; Arquitectura</p>
+          <h2 class="font-display font-bold text-3xl sm:text-4xl text-white tracking-tight">Ingeniería Pura</h2>
+        </div>
+
+        <!-- Category Tabs -->
+        <div class="flex flex-wrap gap-2" role="tablist">
+          <button type="button" data-spec-tab="all" class="spec-tab-btn active px-4 py-2 rounded-md bg-white text-obsidian font-display font-semibold text-[11px] tracking-[0.16em] uppercase transition-all">Vista Completa</button>
+          <button type="button" data-spec-tab="motor" class="spec-tab-btn px-4 py-2 rounded-md bg-obsidian border border-white/10 text-gray-300 hover:text-white font-display font-medium text-[11px] tracking-[0.16em] uppercase transition-all">Motor &amp; Rendimiento</button>
+          <button type="button" data-spec-tab="aero" class="spec-tab-btn px-4 py-2 rounded-md bg-obsidian border border-white/10 text-gray-300 hover:text-white font-display font-medium text-[11px] tracking-[0.16em] uppercase transition-all">Aerodinámica DRS</button>
+          <button type="button" data-spec-tab="chasis" class="spec-tab-btn px-4 py-2 rounded-md bg-obsidian border border-white/10 text-gray-300 hover:text-white font-display font-medium text-[11px] tracking-[0.16em] uppercase transition-all">Chasis &amp; Peso</button>
+        </div>
+      </div>
+
+      <!-- Featured Aero Photography Banner (1000006000.jpg) -->
+      <div class="mb-8 rounded-2xl overflow-hidden border border-white/10 bg-obsidian grid grid-cols-1 lg:grid-cols-12">
+        <div class="lg:col-span-7 relative aspect-[16/9] lg:aspect-auto overflow-hidden bg-white">
+          <img
+            src="1000006000.jpg"
+            alt="Vista trasera Porsche 911 GT3 RS con alerón Swan-Neck y frenos PCCB"
+            onerror="this.onerror=null;this.src='https://placehold.co/1100x650/141416/F5F5F7?text=Aerodinamica+DRS';"
+            class="w-full h-full object-cover object-center"
+          />
+        </div>
+        <div class="lg:col-span-5 p-7 sm:p-9 flex flex-col justify-center space-y-4">
+          <span class="text-[11px] font-display tracking-[0.25em] uppercase text-porscheGold font-semibold">Aerodinámica Activa · Swan-Neck</span>
+          <h3 class="font-display font-bold text-2xl text-white">860 kg de carga aerodinámica a 285 km/h.</h3>
+          <p class="text-sm text-gray-400 leading-relaxed">
+            Por primera vez en un Porsche de producción en serie, el alerón trasero de dos piezas incorpora el sistema hidráulico DRS (Drag Reduction System) derivado directamente de la Fórmula 1 y el 911 RSR de Le Mans.
+          </p>
+          <div class="pt-2 grid grid-cols-2 gap-4 border-t border-white/10 text-xs">
+            <div>
+              <span class="text-gray-500 block">A 200 km/h</span>
+              <span class="font-display font-bold text-white text-base tabular-nums">409 kg Downforce</span>
+            </div>
+            <div>
+              <span class="text-gray-500 block">Freno Aerodinámico</span>
+              <span class="font-display font-bold text-porscheGold text-base">Airbrake Activo</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Telemetry Cards Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <!-- Card 1: Motorización -->
+        <div data-spec-card="motor" class="spec-card rounded-2xl bg-obsidian border border-white/10 p-7">
+          <div class="flex items-center justify-between mb-4">
+            <span class="text-xs font-display tracking-[0.22em] uppercase text-porscheRed font-semibold">01 · Motorización</span>
+            <span class="text-xs font-display text-gray-400">Atmosférico 4.0L</span>
+          </div>
+          <h3 class="font-display font-bold text-xl text-white mb-5">6 Cilindros Bóxer · 9,000 RPM</h3>
+          <dl class="space-y-3 text-sm">
+            <div class="flex justify-between py-2 border-b border-white/10">
+              <dt class="text-gray-400">Cilindrada</dt>
+              <dd class="font-medium text-white tabular-nums">3,996 cm³</dd>
+            </div>
+            <div class="flex justify-between py-2 border-b border-white/10">
+              <dt class="text-gray-400">Potencia máxima</dt>
+              <dd class="font-medium text-white tabular-nums">386 kW (525 CV) a 8,500 rpm</dd>
+            </div>
+            <div class="flex justify-between py-2 border-b border-white/10">
+              <dt class="text-gray-400">Régimen máximo de giro</dt>
+              <dd class="font-medium text-porscheGold tabular-nums">9,000 rpm</dd>
+            </div>
+            <div class="flex justify-between py-2">
+              <dt class="text-gray-400">Par máximo</dt>
+              <dd class="font-medium text-white tabular-nums">465 Nm a 6,300 rpm</dd>
+            </div>
+          </dl>
+        </div>
+
+        <!-- Card 2: Transmisión y Chasis -->
+        <div data-spec-card="chasis" class="spec-card rounded-2xl bg-obsidian border border-white/10 p-7">
+          <div class="flex items-center justify-between mb-4">
+            <span class="text-xs font-display tracking-[0.22em] uppercase text-porscheRed font-semibold">02 · Transmisión y Chasis</span>
+            <span class="text-xs font-display text-gray-400">Puesta a punto RS</span>
+          </div>
+          <h3 class="font-display font-bold text-xl text-white mb-5">PDK 7 Velocidades &amp; PASM</h3>
+          <dl class="space-y-3 text-sm">
+            <div class="flex justify-between py-2 border-b border-white/10">
+              <dt class="text-gray-400">Caja de cambios</dt>
+              <dd class="font-medium text-white text-right">Porsche Doppelkupplung (PDK) 7 vel.</dd>
+            </div>
+            <div class="flex justify-between py-2 border-b border-white/10">
+              <dt class="text-gray-400">Eje delantero</dt>
+              <dd class="font-medium text-white text-right">Doble horquilla aerodinámica</dd>
+            </div>
+            <div class="flex justify-between py-2 border-b border-white/10">
+              <dt class="text-gray-400">Eje trasero</dt>
+              <dd class="font-medium text-white text-right">Multibrazo LSA con eje direccional</dd>
+            </div>
+            <div class="flex justify-between py-2">
+              <dt class="text-gray-400">Amortiguación</dt>
+              <dd class="font-medium text-porscheGold text-right">PASM específico RS ajustable desde volante</dd>
+            </div>
+          </dl>
+        </div>
+
+        <!-- Card 3: Aerodinámica Activa (DRS) -->
+        <div data-spec-card="aero" class="spec-card rounded-2xl bg-obsidian border border-white/10 p-7">
+          <div class="flex items-center justify-between mb-4">
+            <span class="text-xs font-display tracking-[0.22em] uppercase text-porscheGold font-semibold">03 · Aerodinámica Activa</span>
+            <span class="text-xs font-display text-gray-400">Sistema DRS</span>
+          </div>
+          <h3 class="font-display font-bold text-xl text-white mb-5">Gestión Térmica &amp; Flujo Laminar</h3>
+          <dl class="space-y-3 text-sm">
+            <div class="flex justify-between py-2 border-b border-white/10">
+              <dt class="text-gray-400">Carga aerodinámica a 200 km/h</dt>
+              <dd class="font-medium text-white tabular-nums">409 kg</dd>
+            </div>
+            <div class="flex justify-between py-2 border-b border-white/10">
+              <dt class="text-gray-400">Carga aerodinámica máxima (285 km/h)</dt>
+              <dd class="font-medium text-porscheGold tabular-nums">860 kg (3x GT3 estándar)</dd>
+            </div>
+            <div class="flex justify-between py-2 border-b border-white/10">
+              <dt class="text-gray-400">Radiador central</dt>
+              <dd class="font-medium text-white text-right">Inclinado derivado del 911 RSR</dd>
+            </div>
+            <div class="flex justify-between py-2">
+              <dt class="text-gray-400">Difusores frontales</dt>
+              <dd class="font-medium text-white text-right">Aletas activas sincronizadas</dd>
+            </div>
+          </dl>
+        </div>
+
+        <!-- Card 4: Dimensiones y Peso -->
+        <div data-spec-card="chasis" class="spec-card rounded-2xl bg-obsidian border border-white/10 p-7">
+          <div class="flex items-center justify-between mb-4">
+            <span class="text-xs font-display tracking-[0.22em] uppercase text-porscheGold font-semibold">04 · Dimensiones y Peso</span>
+            <span class="text-xs font-display text-gray-400">Construcción Ligera CFRP</span>
+          </div>
+          <h3 class="font-display font-bold text-xl text-white mb-5">1,450 kg · Construcción en Carbono</h3>
+          <dl class="space-y-3 text-sm">
+            <div class="flex justify-between py-2 border-b border-white/10">
+              <dt class="text-gray-400">Peso en vacío (DIN)</dt>
+              <dd class="font-medium text-white tabular-nums">1,450 kg (con Paquete Weissach)</dd>
+            </div>
+            <div class="flex justify-between py-2 border-b border-white/10">
+              <dt class="text-gray-400">Relación peso / potencia</dt>
+              <dd class="font-medium text-porscheGold tabular-nums">2.76 kg / CV</dd>
+            </div>
+            <div class="flex justify-between py-2 border-b border-white/10">
+              <dt class="text-gray-400">Longitud / Anchura</dt>
+              <dd class="font-medium text-white tabular-nums">4,572 mm / 1,900 mm</dd>
+            </div>
+            <div class="flex justify-between py-2">
+              <dt class="text-gray-400">Neumáticos (Del. / Tras.)</dt>
+              <dd class="font-medium text-white tabular-nums">275/35 ZR20 · 335/30 ZR21</dd>
+            </div>
+          </dl>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================
+       4. PORSCHE CENTER APPOINTMENT BOOKING ("AGENDAR CITA PRIVADA")
+  ========================================================== -->
+  <section id="cita" class="py-24 bg-obsidian bg-studio-grid relative border-t border-white/10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+        
+        <!-- LEFT SIDE: VIP Consultation Details & Selected Configuration Summary (5 Cols) -->
+        <div class="lg:col-span-5 space-y-8">
+          <div>
+            <p class="text-xs font-display tracking-[0.28em] uppercase text-porscheGold mb-3">Atención Personalizada</p>
+            <h2 class="font-display font-bold text-3xl sm:text-4xl text-white tracking-tight">Agendar Cita con Porsche</h2>
+            <p class="text-gray-400 font-light mt-4 leading-relaxed">
+              Vive la experiencia Exclusive Manufaktur en nuestros Porsche Centers. Un especialista de producto revisará tu configuración personalizada y te guiará en disponibilidad, tiempos de asignación y opciones de pista.
+            </p>
+          </div>
+
+          <!-- VIP Showroom Benefits -->
+          <div class="space-y-4">
+            <div class="flex items-start gap-3.5">
+              <div class="w-8 h-8 rounded-lg bg-carbon border border-porscheGold/40 flex items-center justify-center text-porscheGold shrink-0 mt-0.5">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+              </div>
+              <div>
+                <h4 class="font-display font-semibold text-sm text-white">Estudio Exclusive Manufaktur</h4>
+                <p class="text-xs text-gray-400 mt-0.5">Muestras físicas de pintura Paint to Sample, fibra de carbono satinada y tapicerías Race-Tex.</p>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-3.5">
+              <div class="w-8 h-8 rounded-lg bg-carbon border border-porscheGold/40 flex items-center justify-center text-porscheGold shrink-0 mt-0.5">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+              </div>
+              <div>
+                <h4 class="font-display font-semibold text-sm text-white">Telemetría y Experiencia en Pista</h4>
+                <p class="text-xs text-gray-400 mt-0.5">Asesoría directa con instructores certificados de Porsche Track Experience.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Auto-Populated Configuration Card -->
+          <div class="rounded-2xl bg-carbon border border-porscheGold/30 p-6 shadow-xl">
+            <div class="flex items-center justify-between pb-3 mb-4 border-b border-white/10">
+              <span class="text-[11px] font-display tracking-[0.22em] uppercase text-porscheGold font-semibold">Tu Configuración Guardada</span>
+              <a href="#configurador" class="text-[11px] text-gray-400 hover:text-white underline">Editar</a>
+            </div>
+            <ul class="space-y-2.5 text-xs">
+              <li class="flex justify-between">
+                <span class="text-gray-400">Modelo:</span>
+                <span class="text-white font-semibold">Porsche 911 GT3 RS (992)</span>
+              </li>
+              <li class="flex justify-between">
+                <span class="text-gray-400">Acabado Exterior:</span>
+                <span id="summary-paint" class="text-white font-medium">Blanco Carrara / Ice Grey</span>
+              </li>
+              <li class="flex justify-between">
+                <span class="text-gray-400">Rines:</span>
+                <span id="summary-wheels" class="text-white font-medium">Pyro Red</span>
+              </li>
+              <li class="flex justify-between items-start gap-4">
+                <span class="text-gray-400 shrink-0">Paquetes:</span>
+                <span id="summary-packages" class="text-white font-medium text-right">Paquete Weissach</span>
+              </li>
+              <li class="pt-3 mt-2 border-t border-white/10 flex justify-between items-baseline">
+                <span class="text-gray-300 font-display uppercase tracking-wider">Valor Estimado:</span>
+                <span id="summary-total" class="font-display font-bold text-lg text-porscheGold tabular-nums">$276,320 USD</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- RIGHT SIDE: Validated Luxury Booking Form (7 Cols) -->
+        <div class="lg:col-span-7">
+          <form id="booking-form" class="rounded-2xl bg-carbon border border-white/10 p-6 sm:p-10 shadow-2xl space-y-6" novalidate>
+            <div class="border-b border-white/10 pb-4">
+              <h3 class="font-display font-semibold text-lg text-white">Solicitud de Cita Privada</h3>
+              <p class="text-xs text-gray-400 mt-1">Completa tus datos para generar tu pase digital de atención prioritaria.</p>
+            </div>
+
+            <!-- Inline Error Banner -->
+            <div id="form-error-banner" class="hidden p-4 rounded-xl bg-porscheRed/15 border border-porscheRed text-xs text-red-200">
+              Por favor completa todos los campos obligatorios marcados correctamente antes de confirmar tu cita.
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+              <div>
+                <label for="client-name" class="block text-xs font-display tracking-wider uppercase text-gray-300 mb-2">Nombre Completo *</label>
+                <input type="text" id="client-name" required placeholder="Ej. Alejandro Restrepo" class="luxury-input w-full px-4 py-3 rounded-lg text-sm" />
+              </div>
+
+              <div>
+                <label for="client-email" class="block text-xs font-display tracking-wider uppercase text-gray-300 mb-2">Correo Electrónico *</label>
+                <input type="email" id="client-email" required placeholder="nombre@dominio.com" class="luxury-input w-full px-4 py-3 rounded-lg text-sm" />
+              </div>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+              <div>
+                <label for="client-phone" class="block text-xs font-display tracking-wider uppercase text-gray-300 mb-2">Teléfono / WhatsApp *</label>
+                <input type="tel" id="client-phone" required placeholder="+57 300 000 0000" class="luxury-input w-full px-4 py-3 rounded-lg text-sm" />
+              </div>
+
+              <div>
+                <label for="porsche-center" class="block text-xs font-display tracking-wider uppercase text-gray-300 mb-2">Porsche Center / Ciudad *</label>
+                <select id="porsche-center" required class="luxury-input w-full px-4 py-3 rounded-lg text-sm">
+                  <option value="Porsche Center Bogotá">Porsche Center Bogotá</option>
+                  <option value="Porsche Center Medellín">Porsche Center Medellín</option>
+                  <option value="Porsche Center Cali">Porsche Center Cali</option>
+                  <option value="Asesoría Virtual VIP">Asesoría Virtual VIP (Videollamada Privada)</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-5">
+              <div>
+                <label for="appointment-type" class="block text-xs font-display tracking-wider uppercase text-gray-300 mb-2">Tipo de Cita *</label>
+                <select id="appointment-type" required class="luxury-input w-full px-4 py-3 rounded-lg text-sm">
+                  <option value="Configuración Privada en Estudio">Configuración en Estudio</option>
+                  <option value="Prueba de Manejo en Circuito">Prueba en Circuito</option>
+                  <option value="Asesoría Financiera">Asesoría Financiera</option>
+                </select>
+              </div>
+
+              <div>
+                <label for="appointment-date" class="block text-xs font-display tracking-wider uppercase text-gray-300 mb-2">Fecha Preferida *</label>
+                <input type="date" id="appointment-date" required class="luxury-input w-full px-4 py-3 rounded-lg text-sm" />
+              </div>
+
+              <div>
+                <label for="appointment-time" class="block text-xs font-display tracking-wider uppercase text-gray-300 mb-2">Franja Horaria *</label>
+                <select id="appointment-time" required class="luxury-input w-full px-4 py-3 rounded-lg text-sm">
+                  <option value="10:00 AM — Mañana">10:00 AM — Mañana</option>
+                  <option value="02:30 PM — Tarde">02:30 PM — Tarde</option>
+                  <option value="05:00 PM — Sunset VIP">05:00 PM — Sunset VIP</option>
+                </select>
+              </div>
+            </div>
+
+            <div>
+              <label for="config-notes" class="block text-xs font-display tracking-wider uppercase text-gray-300 mb-2">Especificación Adjunta del Vehículo</label>
+              <textarea id="config-notes" rows="2" readonly class="luxury-input w-full px-4 py-3 rounded-lg text-xs text-gray-300 bg-obsidian/80 cursor-default"></textarea>
+            </div>
+
+            <!-- Refined Proportional Submit Button -->
+            <div class="pt-2 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+              <span class="text-[11px] text-gray-500">Atención sujeta a disponibilidad de agenda Exclusive Manufaktur.</span>
+              <button type="submit" class="px-7 py-3 rounded-md bg-porscheRed hover:bg-[#a80d26] text-white font-display font-medium text-xs tracking-[0.2em] uppercase transition-all shrink-0">
+                Confirmar Reserva
+              </button>
+            </div>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================
+       5. CAMPAIGN FOOTER
+  ========================================================== -->
+  <footer class="bg-obsidian border-t border-white/10 py-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-6">
+      <div class="flex items-center gap-3.5">
+        <img
+          src="1000006004.jpg"
+          alt="Escudo Porsche"
+          onerror="this.style.display='none'"
+          class="w-7 h-8 object-contain mix-blend-lighten"
+        />
+        <span class="font-display font-bold tracking-[0.3em] text-sm text-white">PORSCHE</span>
+        <span class="text-gray-600">|</span>
+        <span class="text-xs font-display tracking-[0.2em] uppercase text-porscheGold">Your Dream Becomes Reality</span>
+      </div>
+
+      <p class="text-xs text-gray-500 text-center md:text-right max-w-xl leading-relaxed">
+        Porsche 911 GT3 RS (992) Concept Campaign · Proyecto creativo y conceptual desarrollado para portafolio de dirección de arte en Behance. Porsche, el escudo Porsche y 911 son marcas registradas de Dr. Ing. h.c. F. Porsche AG.
+      </p>
+    </div>
+  </footer>
+
+  <!-- =========================================================
+       DIGITAL VIP PASS / CONFIRMATION MODAL (WITH ORIGINAL CREST)
+  ========================================================== -->
+  <div id="vip-modal" class="fixed inset-0 z-50 hidden items-center justify-center p-4 bg-black/85 backdrop-blur-md">
+    <div class="relative w-full max-w-lg rounded-2xl bg-carbon border border-porscheGold/50 p-6 sm:p-8 shadow-2xl overflow-hidden">
+      <div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-porscheRed via-porscheGold to-porscheRed"></div>
+
+      <div class="flex items-center justify-between mb-6">
+        <div class="flex items-center gap-3.5">
+          <img
+            src="1000006004.jpg"
+            alt="Escudo Porsche"
+            onerror="this.style.display='none'"
+            class="w-9 h-10 object-contain mix-blend-lighten"
+          />
+          <div>
+            <span class="text-[10px] font-display tracking-[0.28em] uppercase text-porscheGold font-semibold block">Porsche Exclusive VIP Pass</span>
+            <h3 class="font-display font-bold text-lg text-white mt-0.5">Cita Privada Confirmada</h3>
+          </div>
+        </div>
+        <button id="close-modal-btn" type="button" class="p-2 rounded-lg bg-obsidian border border-white/10 text-gray-400 hover:text-white" aria-label="Cerrar ventana">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+        </button>
+      </div>
+
+      <!-- Ticket Body -->
+      <div id="vip-pass-content" class="rounded-xl bg-obsidian border border-white/10 p-5 space-y-4">
+        <div class="flex items-center justify-between border-b border-dashed border-white/15 pb-3">
+          <div>
+            <span class="text-[10px] uppercase tracking-widest text-gray-400 block">Código de Reserva</span>
+            <span id="modal-res-code" class="font-display font-bold text-base text-porscheGold tracking-widest">#PRS-992-GT3</span>
+          </div>
+          <div class="text-right">
+            <span class="text-[10px] uppercase tracking-widest text-gray-400 block">Modelo</span>
+            <span class="font-display font-semibold text-xs text-white">911 GT3 RS (992)</span>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-2 gap-3 text-xs">
+          <div>
+            <span class="text-gray-500 block">Invitado</span>
+            <span id="modal-client-name" class="text-white font-medium">—</span>
+          </div>
+          <div>
+            <span class="text-gray-500 block">Sede Porsche</span>
+            <span id="modal-center" class="text-white font-medium">—</span>
+          </div>
+          <div>
+            <span class="text-gray-500 block">Experiencia</span>
+            <span id="modal-type" class="text-white font-medium">—</span>
+          </div>
+          <div>
+            <span class="text-gray-500 block">Fecha y Hora</span>
+            <span id="modal-datetime" class="text-white font-medium">—</span>
+          </div>
+        </div>
+
+        <div class="pt-3 border-t border-white/10 text-xs space-y-1">
+          <span class="text-gray-500 block">Especificación Configurada</span>
+          <p id="modal-config-summary" class="text-gray-200 leading-relaxed">—</p>
+          <p id="modal-total-price" class="font-display font-bold text-sm text-porscheGold pt-1 tabular-nums">—</p>
+        </div>
+      </div>
+
+      <!-- Modal Actions -->
+      <div class="mt-6 flex flex-wrap items-center justify-end gap-3">
+        <button id="copy-code-btn" type="button" class="px-5 py-2.5 rounded-md bg-obsidian border border-white/15 hover:border-porscheGold text-white font-display font-medium text-xs tracking-[0.18em] uppercase transition-all">
+          Copiar Código
+        </button>
+        <button id="print-pass-btn" type="button" class="px-5 py-2.5 rounded-md bg-white hover:bg-gray-200 text-obsidian font-display font-semibold text-xs tracking-[0.18em] uppercase transition-all inline-flex items-center gap-2">
+          <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z"/></svg>
+          <span>Guardar Pase</span>
+        </button>
+      </div>
+      <p id="copy-feedback" class="hidden text-center text-[11px] text-porscheGold mt-2">Código de reserva copiado al portapapeles.</p>
+    </div>
+  </div>
+
+  <!-- =========================================================
+       JAVASCRIPT: REAL PHOTO STUDIO CONFIGURATOR & BOOKING LOGIC
+  ========================================================== -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // --- 1. DATA DEFINITIONS ---
+      const BASE_PRICE = 241300;
+
+      const CAMERA_ANGLES = {
+        side: {
+          src: '1000005999_2.jpg',
+          label: 'Fotografía de Estudio · Perfil Lateral'
+        },
+        front: {
+          src: '1000006001.jpg',
+          label: 'Fotografía de Estudio · Tres Cuartos Frontal'
+        },
+        rear: {
+          src: '1000006000.jpg',
+          label: 'Fotografía de Estudio · Tres Cuartos Trasero'
+        }
+      };
+
+      const PAINT_OPTIONS = [
+        {
+          id: 'carrara-white',
+          name: 'Blanco Carrara / Ice Grey',
+          shortName: 'Blanco Carrara',
+          price: 0,
+          swatch: '#F0F2F5',
+          filter: 'contrast(1.04) brightness(1.0)',
+          overlayColor: 'transparent',
+          overlayOpacity: 0,
+          blendMode: 'multiply'
+        },
+        {
+          id: 'jet-black',
+          name: 'Negro Jet Metálico',
+          shortName: 'Negro Jet',
+          price: 1800,
+          swatch: '#18181B',
+          filter: 'invert(0.88) hue-rotate(180deg) contrast(1.22) brightness(0.92)',
+          overlayColor: 'transparent',
+          overlayOpacity: 0,
+          blendMode: 'multiply'
+        },
+        {
+          id: 'arctic-grey',
+          name: 'Gris Ártico',
+          shortName: 'Gris Ártico',
+          price: 4200,
+          swatch: '#8E96A0',
+          filter: 'contrast(1.12) brightness(0.84) saturate(0.85)',
+          overlayColor: '#64748B',
+          overlayOpacity: 0.34,
+          blendMode: 'multiply'
+        },
+        {
+          id: 'guards-red',
+          name: 'Rojo Guardia',
+          shortName: 'Rojo Guardia',
+          price: 0,
+          swatch: '#C8102E',
+          filter: 'contrast(1.14) brightness(0.94) saturate(1.25)',
+          overlayColor: '#D90429',
+          overlayOpacity: 0.56,
+          blendMode: 'multiply'
+        },
+        {
+          id: 'shark-blue',
+          name: 'Azul Shark',
+          shortName: 'Azul Shark',
+          price: 4200,
+          swatch: '#0284C7',
+          filter: 'contrast(1.14) brightness(0.94) saturate(1.25)',
+          overlayColor: '#0284C7',
+          overlayOpacity: 0.54,
+          blendMode: 'multiply'
+        },
+        {
+          id: 'python-green',
+          name: 'Verde Pitón',
+          shortName: 'Verde Pitón',
+          price: 4200,
+          swatch: '#16A34A',
+          filter: 'contrast(1.14) brightness(0.94) saturate(1.2)',
+          overlayColor: '#16A34A',
+          overlayOpacity: 0.52,
+          blendMode: 'multiply'
+        }
+      ];
+
+      const WHEEL_OPTIONS = [
+        { id: 'pyro-red', name: 'Pyro Red', price: 1500, swatch: '#C8102E' },
+        { id: 'satin-black', name: 'Negro Satinado', price: 0, swatch: '#18181B' },
+        { id: 'racing-white', name: 'Blanco Racing', price: 1200, swatch: '#F4F4F5' },
+        { id: 'neodyme-gold', name: 'Oro Neodyme', price: 1500, swatch: '#C5A059' }
+      ];
+
+      // --- 2. APPLICATION STATE ---
+      const state = {
+        angle: 'side',
+        paint: PAINT_OPTIONS[0],
+        wheel: WHEEL_OPTIONS[0],
+        weissach: true,
+        pccb: false,
+        lift: false
+      };
+
+      // --- 3. DOM REFERENCES ---
+      const configuratorPhoto = document.getElementById('configurator-photo');
+      const carPaintOverlay = document.getElementById('car-paint-overlay');
+      const stageAngleLabel = document.getElementById('stage-angle-label');
+      const paintSwatchesEl = document.getElementById('paint-swatches');
+      const wheelSwatchesEl = document.getElementById('wheel-swatches');
+      const pkgWeissachEl = document.getElementById('pkg-weissach');
+      const pkgPccbEl = document.getElementById('pkg-pccb');
+      const pkgLiftEl = document.getElementById('pkg-lift');
+
+      const formatUSD = (num) => '$' + num.toLocaleString('en-US') + ' USD';
+
+      // --- 4. RENDER SWATCH CONTROLS ---
+      function renderSwatches() {
+        paintSwatchesEl.innerHTML = PAINT_OPTIONS.map((p) => {
+          const isSelected = state.paint.id === p.id;
+          return `
+            <button type="button" data-paint-id="${p.id}"
+              class="p-2.5 rounded-xl border text-left transition-all flex flex-col gap-2 ${isSelected ? 'bg-graphite border-porscheGold ring-1 ring-porscheGold/40' : 'bg-obsidian border-white/10 hover:border-white/30'}">
+              <span class="w-full h-6 rounded-lg border border-white/20 block shadow-inner" style="background:${p.swatch};"></span>
+              <span class="text-[11px] font-medium text-white leading-tight block truncate">${p.shortName}</span>
+              <span class="text-[10px] text-gray-400 tabular-nums">${p.price === 0 ? 'Serie' : '+$' + p.price.toLocaleString('en-US')}</span>
+            </button>
+          `;
+        }).join('');
+
+        wheelSwatchesEl.innerHTML = WHEEL_OPTIONS.map((w) => {
+          const isSelected = state.wheel.id === w.id;
+          return `
+            <button type="button" data-wheel-id="${w.id}"
+              class="p-2.5 rounded-xl border text-left transition-all flex items-center gap-3 ${isSelected ? 'bg-graphite border-porscheGold ring-1 ring-porscheGold/40' : 'bg-obsidian border-white/10 hover:border-white/30'}">
+              <span class="w-6 h-6 rounded-full border border-white/25 shrink-0 block" style="background:${w.swatch};"></span>
+              <div class="min-w-0">
+                <span class="text-[11px] font-medium text-white block truncate">${w.name}</span>
+                <span class="text-[10px] text-gray-400 tabular-nums block">${w.price === 0 ? 'Serie' : '+$' + w.price.toLocaleString('en-US')}</span>
+              </div>
+            </button>
+          `;
+        }).join('');
+      }
+
+      // --- 5. UPDATE REAL-PHOTO STUDIO & PRICING ---
+      function updateConfigurator() {
+        // Apply photorealistic filter and paint overlay to real studio image
+        configuratorPhoto.style.filter = state.paint.filter;
+        carPaintOverlay.style.backgroundColor = state.paint.overlayColor;
+        carPaintOverlay.style.opacity = state.paint.overlayOpacity;
+        carPaintOverlay.style.mixBlendMode = state.paint.blendMode;
+
+        // Calculate Totals
+        let optionsTotal = state.paint.price + state.wheel.price;
+        const activePackages = [];
+
+        if (state.weissach) {
+          optionsTotal += 33520;
+          activePackages.push('Paquete Weissach');
+        }
+        if (state.pccb) {
+          optionsTotal += 9210;
+          activePackages.push('Frenos Cerámicos PCCB');
+        }
+        if (state.lift) {
+          optionsTotal += 3670;
+          activePackages.push('Elevación Eje Delantero');
+        }
+
+        const grandTotal = BASE_PRICE + optionsTotal;
+        const packagesText = activePackages.length > 0 ? activePackages.join(', ') : 'Configuración de Serie';
+
+        // Update Stage Labels
+        document.getElementById('active-paint-title').textContent = state.paint.name;
+        document.getElementById('active-wheel-title').textContent = `Rines ${state.wheel.name}`;
+        document.getElementById('active-pack-badge').textContent = state.weissach ? 'Paquete Weissach Activo' : 'Carrocería Estándar';
+        document.getElementById('stage-weight-val').textContent = state.weissach ? '1,450 kg (DIN)' : '1,465 kg (DIN)';
+        document.getElementById('stage-brake-val').textContent = state.pccb ? 'PCCB Cerámicos (410 mm)' : 'Acero Competición';
+
+        // Update Price Tags
+        document.getElementById('paint-price-tag').textContent = state.paint.price === 0 ? 'Serie ($0)' : `+${formatUSD(state.paint.price)}`;
+        document.getElementById('wheel-price-tag').textContent = state.wheel.price === 0 ? 'Serie ($0)' : `+${formatUSD(state.wheel.price)}`;
+        document.getElementById('options-price-display').textContent = `+${formatUSD(optionsTotal)}`;
+        document.getElementById('total-price-display').textContent = formatUSD(grandTotal);
+
+        // Sync with Appointment Booking Summary Card & Form Textarea
+        document.getElementById('summary-paint').textContent = state.paint.name;
+        document.getElementById('summary-wheels').textContent = state.wheel.name;
+        document.getElementById('summary-packages').textContent = packagesText;
+        document.getElementById('summary-total').textContent = formatUSD(grandTotal);
+
+        document.getElementById('config-notes').value =
+          `Porsche 911 GT3 RS (992) | Acabado: ${state.paint.name} | Rines: ${state.wheel.name} | Paquetes: ${packagesText} | Total Estimado: ${formatUSD(grandTotal)}`;
+
+        renderSwatches();
+      }
+
+      // Camera Angle Switcher Listeners
+      const angleBtns = document.querySelectorAll('.angle-btn');
+      angleBtns.forEach((btn) => {
+        btn.addEventListener('click', () => {
+          const selectedAngle = btn.dataset.angle;
+          if (!CAMERA_ANGLES[selectedAngle]) return;
+          state.angle = selectedAngle;
+
+          angleBtns.forEach((b) => {
+            b.classList.remove('bg-white', 'text-obsidian', 'font-semibold');
+            b.classList.add('bg-carbon', 'border', 'border-white/15', 'text-gray-300');
+          });
+          btn.classList.remove('bg-carbon', 'border', 'border-white/15', 'text-gray-300');
+          btn.classList.add('bg-white', 'text-obsidian', 'font-semibold');
+
+          configuratorPhoto.src = CAMERA_ANGLES[selectedAngle].src;
+          stageAngleLabel.textContent = CAMERA_ANGLES[selectedAngle].label;
+        });
+      });
+
+      // Swatches Delegation
+      paintSwatchesEl.addEventListener('click', (e) => {
+        const btn = e.target.closest('[data-paint-id]');
+        if (!btn) return;
+        const found = PAINT_OPTIONS.find((p) => p.id === btn.dataset.paintId);
+        if (found) {
+          state.paint = found;
+          updateConfigurator();
+        }
+      });
+
+      wheelSwatchesEl.addEventListener('click', (e) => {
+        const btn = e.target.closest('[data-wheel-id]');
+        if (!btn) return;
+        const found = WHEEL_OPTIONS.find((w) => w.id === btn.dataset.wheelId);
+        if (found) {
+          state.wheel = found;
+          updateConfigurator();
+        }
+      });
+
+      // Checkboxes Listeners
+      pkgWeissachEl.addEventListener('change', (e) => {
+        state.weissach = e.target.checked;
+        updateConfigurator();
+      });
+      pkgPccbEl.addEventListener('change', (e) => {
+        state.pccb = e.target.checked;
+        updateConfigurator();
+      });
+      pkgLiftEl.addEventListener('change', (e) => {
+        state.lift = e.target.checked;
+        updateConfigurator();
+      });
+
+      // Jump to Appointment Form from Configurator CTA
+      document.getElementById('reserve-config-btn').addEventListener('click', () => {
+        const citaSection = document.getElementById('cita');
+        citaSection.scrollIntoView({ behavior: 'smooth' });
+        setTimeout(() => {
+          document.getElementById('client-name').focus();
+        }, 650);
+      });
+
+      // --- 6. TECHNICAL SPECIFICATIONS TABS ---
+      const specTabBtns = document.querySelectorAll('.spec-tab-btn');
+      const specCards = document.querySelectorAll('.spec-card');
+
+      specTabBtns.forEach((btn) => {
+        btn.addEventListener('click', () => {
+          const target = btn.dataset.specTab;
+
+          specTabBtns.forEach((b) => {
+            b.classList.remove('bg-white', 'text-obsidian', 'font-semibold');
+            b.classList.add('bg-obsidian', 'border', 'border-white/10', 'text-gray-300');
+          });
+          btn.classList.remove('bg-obsidian', 'border', 'border-white/10', 'text-gray-300');
+          btn.classList.add('bg-white', 'text-obsidian', 'font-semibold');
+
+          specCards.forEach((card) => {
+            if (target === 'all' || card.dataset.specCard === target) {
+              card.classList.remove('hidden');
+            } else {
+              card.classList.add('hidden');
+            }
+          });
+        });
+      });
+
+      // --- 7. MOBILE MENU TOGGLE ---
+      const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+      const mobileMenu = document.getElementById('mobile-menu');
+      mobileMenuBtn.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+      });
+      mobileMenu.querySelectorAll('a').forEach((link) => {
+        link.addEventListener('click', () => mobileMenu.classList.add('hidden'));
+      });
+
+      // --- 8. APPOINTMENT BOOKING FORM & VIP MODAL ---
+      const dateInput = document.getElementById('appointment-date');
+      const today = new Date();
+      today.setDate(today.getDate() + 1);
+      dateInput.min = today.toISOString().split('T')[0];
+      dateInput.value = today.toISOString().split('T')[0];
+
+      const bookingForm = document.getElementById('booking-form');
+      const errorBanner = document.getElementById('form-error-banner');
+      const vipModal = document.getElementById('vip-modal');
+
+      bookingForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+
+        const name = document.getElementById('client-name').value.trim();
+        const email = document.getElementById('client-email').value.trim();
+        const phone = document.getElementById('client-phone').value.trim();
+        const center = document.getElementById('porsche-center').value;
+        const type = document.getElementById('appointment-type').value;
+        const dateVal = document.getElementById('appointment-date').value;
+        const timeVal = document.getElementById('appointment-time').value;
+
+        const emailValid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+
+        if (!name || !emailValid || phone.length < 7 || !dateVal) {
+          errorBanner.classList.remove('hidden');
+          errorBanner.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          return;
+        }
+
+        errorBanner.classList.add('hidden');
+
+        const randomNum = Math.floor(100 + Math.random() * 900);
+        const resCode = `#PRS-992-${randomNum}`;
+
+        document.getElementById('modal-res-code').textContent = resCode;
+        document.getElementById('modal-client-name').textContent = name;
+        document.getElementById('modal-center').textContent = center;
+        document.getElementById('modal-type').textContent = type;
+        document.getElementById('modal-datetime').textContent = `${dateVal} · ${timeVal}`;
+        document.getElementById('modal-config-summary').textContent =
+          `${state.paint.name} · Rines ${state.wheel.name} · ${document.getElementById('summary-packages').textContent}`;
+        document.getElementById('modal-total-price').textContent =
+          `Valor Estimado: ${document.getElementById('summary-total').textContent}`;
+
+        vipModal.classList.remove('hidden');
+        vipModal.classList.add('flex');
+      });
+
+      document.getElementById('close-modal-btn').addEventListener('click', () => {
+        vipModal.classList.add('hidden');
+        vipModal.classList.remove('flex');
+      });
+
+      vipModal.addEventListener('click', (e) => {
+        if (e.target === vipModal) {
+          vipModal.classList.add('hidden');
+          vipModal.classList.remove('flex');
+        }
+      });
+
+      document.getElementById('print-pass-btn').addEventListener('click', () => {
+        window.print();
+      });
+
+      document.getElementById('copy-code-btn').addEventListener('click', () => {
+        const codeText = document.getElementById('modal-res-code').textContent;
+        const tempInput = document.createElement('input');
+        tempInput.value = codeText;
+        document.body.appendChild(tempInput);
+        tempInput.select();
+        try {
+          document.execCommand('copy');
+          const fb = document.getElementById('copy-feedback');
+          fb.classList.remove('hidden');
+          setTimeout(() => fb.classList.add('hidden'), 2800);
+        } catch (err) {
+          // Silent fallback
+        }
+        document.body.removeChild(tempInput);
+      });
+
+      // Initialize Configurator
+      updateConfigurator();
+    });
+  </script>
+</body>
+</html>
